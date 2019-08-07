@@ -472,7 +472,9 @@ export default class BottomSheetBehavior extends React.Component<Props, State> {
           ? this.velocity
           : this.masterVelocity,
       },
-    },
+    }, {
+      listener: (event: any) => console.log(event)
+    }
   ])
 
   private handleTap = event([{ nativeEvent: { state: this.tapState } }])
